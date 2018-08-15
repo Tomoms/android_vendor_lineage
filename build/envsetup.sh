@@ -960,15 +960,15 @@ function fixup_common_out_dir() {
 }
 
 # Enable SD-LLVM if available
-if [ -d $(gettop)/prebuilts/snapdragon-llvm/toolchains ]; then
+if [ -d $(gettop)/prebuilts/clang/host/linux-x86/sdclang-4.0.14 ]; then
     case `uname -s` in
         Darwin)
             # Darwin is not supported yet
             ;;
         *)
             export SDCLANG=true
-            export SDCLANG_PATH=$(gettop)/prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0/prebuilt/linux-x86_64/bin
-            export SDCLANG_PATH_2=$(gettop)/prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0/prebuilt/linux-x86_64/bin
+            export SDCLANG_PATH=$(gettop)/prebuilts/clang/host/linux-x86/sdclang-4.0.14/bin
+            export SDCLANG_PATH_2=$(gettop)/prebuilts/clang/host/linux-x86/sdclang-4.0.14/bin
             export SDCLANG_LTO_DEFS=$(gettop)/vendor/lineage/build/core/sdllvm-lto-defs.mk
             ;;
     esac
