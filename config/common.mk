@@ -369,3 +369,10 @@ endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
+
+# Include SDCLANG definitions if it is requested and available
+ifeq ($(HOST_OS),linux)
+    ifneq ($(wildcard vendor/qcom/sdclang/),)
+        include vendor/lineage/sdclang/sdllvm-lto-defs.mk
+    endif
+endif
