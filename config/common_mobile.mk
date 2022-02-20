@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     Eleven \
     Etar \
     ExactCalculator \
+    GmsCompat \
     Jelly \
     Profiles \
     Seedvault
