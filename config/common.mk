@@ -251,6 +251,8 @@ endif
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     CarSystemUI \
+    Launcher3 \
+    Settings \
     SystemUI
 
 PRODUCT_PRODUCT_PROPERTIES += \
