@@ -271,6 +271,7 @@ if __name__ == '__main__':
                 revision = project.get('revision', default_revision)
 
         if name not in project_name_to_data:
+            name = name.replace("Tomoms", "LineageOS")
             project_name_to_data[name] = {}
         revision = revision.split('refs/heads/')[-1]
         project_name_to_data[name][revision] = path
