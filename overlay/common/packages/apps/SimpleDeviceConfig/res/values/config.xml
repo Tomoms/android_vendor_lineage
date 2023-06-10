@@ -79,5 +79,8 @@
 
         <!-- Keep up to 7 days of permission usage history -->
         <item>privacy/discrete_history_cutoff_millis=604800000</item>
+
+        <!-- Enable protected by android banner -->
+        <item>privacy/safety_protection_enabled=true</item>
     </string-array>
 </resources>
