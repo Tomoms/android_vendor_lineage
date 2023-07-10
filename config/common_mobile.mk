@@ -14,21 +14,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Apps
 PRODUCT_PACKAGES += \
-    Aperture \
     Apps \
     Backgrounds \
-    Eleven \
-    Etar \
     ExactCalculator \
     GmsCompat \
-    Jelly \
-    Profiles \
-    Seedvault
-
-ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
-PRODUCT_PACKAGES += \
-    AudioFX
-endif
+    Jelly
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
