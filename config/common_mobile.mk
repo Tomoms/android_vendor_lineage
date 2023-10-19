@@ -22,11 +22,9 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
-    SystemUIGo \
     TrebuchetQuickStepGo
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGo \
     TrebuchetQuickStepGo
 else
 PRODUCT_PACKAGES += \
