@@ -21,6 +21,47 @@
             System
         -->
 
+        <!-- Activity Manager -->
+        <item>activity_manager/bg_current_drain_auto_restrict_abusive_apps_enabled=false</item>
+        <item>activity_manager/bg_prompt_fgs_on_long_running=false</item>
+        <item>activity_manager/compact_full_delta_rss_throttle_kb=8000</item>
+        <item>activity_manager/compact_full_rss_throttle_kb=12000</item>
+        <item>activity_manager/compact_proc_state_throttle=11</item>
+        <item>activity_manager/compact_statsd_sample_rate=0.0</item>
+        <item>activity_manager/max_cached_processes=4096</item>
+        <item>activity_manager/max_empty_time_millis=2678400000</item>
+        <item>activity_manager/oom_re_ranking_lru_weight=0.35</item>
+        <item>activity_manager/oom_re_ranking_number_to_re_rank=8</item>
+        <item>activity_manager/oom_re_ranking_rss_weight=0.15</item>
+        <item>activity_manager/oom_re_ranking_uses_weight=0.5</item>
+        <item>activity_manager/push_messaging_over_quota_behavior=1</item>
+        <item>activity_manager/use_compaction=true</item>
+        <item>activity_manager/use_oom_re_ranking=false</item>
+        <item>activity_manager_native_boot/freeze_debounce_timeout=10000</item>
+        <item>activity_manager_native_boot/freeze_exempt_inst_pkg=true</item>
+        <item>activity_manager_native_boot/use_freezer=true</item>
+
+        <!-- Misc -->
+        <item>alarm_manager/lazy_batching=true</item>
+        <item>runtime_native/use_app_image_startup_cache=true</item>
+        <item>surface_flinger_native_boot/SkiaTracingFeature__use_skia_tracing=false</item>
+        <item>storage_native_boot/dirty_reclaim_rate=0.5</item>
+        <item>storage_native_boot/fuse_enabled=1</item>
+        <item>storage_native_boot/lifetime_threshold=70</item>
+        <item>storage_native_boot/low_battery_level=20.0</item>
+        <item>storage_native_boot/min_gc_sleeptime=10000</item>
+        <item>storage_native_boot/min_segments_threshold=512</item>
+        <item>storage_native_boot/segment_reclaim_weight=1.0</item>
+        <item>storage_native_boot/take_over_get_content=true</item>
+        <item>storage_native_boot/target_dirty_ratio=80</item>
+
+        <!-- USAP Pool -->
+        <item>runtime_native/usap_pool_enabled=true</item>
+        <item>runtime_native/usap_pool_refill_delay_ms=3000</item>
+        <item>runtime_native/usap_pool_size_max=10</item>
+        <item>runtime_native/usap_pool_size_min=1</item>
+        <item>runtime_native/usap_refill_threshold=5</item>
+
         <!-- Use new privacy indicators for location -->
         <item>privacy/location_indicators_enabled=true</item>
         <!-- Allow users to disable location indicators in Developer Options -->
