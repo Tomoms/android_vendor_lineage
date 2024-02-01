@@ -219,6 +219,7 @@ endif
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
+    CarSystemUI \
     Trebuchet \
     Settings \
     SystemUI
