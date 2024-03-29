@@ -319,6 +319,7 @@ def main():
         parser.error(
             "if --abandon-first is set, you must also give the branch name with --start-branch"
         )
+    args.ignore_missing = True
     if args.auto_branch:
         args.abandon_first = True
         args.ignore_missing = True
