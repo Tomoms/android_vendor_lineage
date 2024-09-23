@@ -44,6 +44,9 @@ endif
 
 # Disable extra StrictMode features on all non-engineering builds
 PRODUCT_PRODUCT_PROPERTIES += persist.sys.strictmode.disable=true
+
+# Disable debug and verbose logging by default
+PRODUCT_PRODUCT_PROPERTIES += log.tag=I
 endif
 
 # Enable Material Design 3 Expressive
