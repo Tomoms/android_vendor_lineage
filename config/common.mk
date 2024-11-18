@@ -357,3 +357,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Shutdown
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.build.shutdown_timeout?=0
+
+# Zygote
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    zygote.critical_window.minute?=10
