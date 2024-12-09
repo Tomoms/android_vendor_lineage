@@ -700,7 +700,7 @@ def apply_change(args, item):
         else:
             cmd_out = None
         result = subprocess.call(
-            ["git", "cherry-pick", "--ff", item["revision"]],
+            ["git", "cherry-pick", "--ff", item["revision"], "-m1"],
             cwd=project_path,
             stdout=cmd_out,
             stderr=cmd_out,
