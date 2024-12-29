@@ -237,6 +237,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
+ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    debug.sf.enable_transaction_tracing=false
+endif
+
 # SetupWizard
 PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.theme=glif_v4 \
