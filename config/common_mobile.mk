@@ -35,7 +35,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 endif
 
 PRODUCT_PACKAGES += \
-    TrebuchetOverlay
+    TrebuchetOverlay \
+    CertifiedPropsOverlay
 
 # Charger
 PRODUCT_PACKAGES += \

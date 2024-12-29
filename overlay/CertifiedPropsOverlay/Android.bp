@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    certificate: "platform",
+    name: "CertifiedPropsOverlay",
+    system_ext_specific: true,
+}
