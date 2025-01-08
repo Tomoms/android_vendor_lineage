@@ -239,6 +239,7 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    debug.sf.disable_client_composition_cache=1 \
     debug.sf.enable_transaction_tracing=false
 endif
 
