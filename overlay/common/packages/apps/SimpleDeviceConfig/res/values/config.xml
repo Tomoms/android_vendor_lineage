@@ -41,20 +41,6 @@
         <item>activity_manager_native_boot/freeze_exempt_inst_pkg=true</item>
         <item>activity_manager_native_boot/use_freezer=true</item>
 
-        <!-- Misc -->
-        <item>alarm_manager/lazy_batching=true</item>
-        <item>runtime_native/use_app_image_startup_cache=true</item>
-        <item>surface_flinger_native_boot/SkiaTracingFeature__use_skia_tracing=false</item>
-        <item>storage_native_boot/dirty_reclaim_rate=0.5</item>
-        <item>storage_native_boot/fuse_enabled=1</item>
-        <item>storage_native_boot/lifetime_threshold=70</item>
-        <item>storage_native_boot/low_battery_level=20.0</item>
-        <item>storage_native_boot/min_gc_sleeptime=10000</item>
-        <item>storage_native_boot/min_segments_threshold=512</item>
-        <item>storage_native_boot/segment_reclaim_weight=1.0</item>
-        <item>storage_native_boot/take_over_get_content=true</item>
-        <item>storage_native_boot/target_dirty_ratio=80</item>
-
         <!-- USAP Pool -->
         <item>runtime_native/usap_pool_enabled=true</item>
         <item>runtime_native/usap_pool_refill_delay_ms=3000</item>
@@ -62,10 +48,26 @@
         <item>runtime_native/usap_pool_size_min=1</item>
         <item>runtime_native/usap_refill_threshold=5</item>
 
-        <!-- Use new privacy indicators for location -->
-        <item>privacy/location_indicators_enabled=true</item>
-        <!-- Allow users to disable location indicators in Developer Options -->
+        <!-- Enable new location indicators -->
+        <item>privacy/location_access_check_enabled=true</item>
+        <item>privacy/location_accuracy_enabled=true</item>
         <item>privacy/location_indicator_settings_enabled=true</item>
+        <item>privacy/location_indicators_show_system=false</item>
+        <item>privacy/location_indicators_small_enabled=true</item>
+
+        <!-- Enable shared connectivity -->
+	<item>wifi/shared_connectivity_enabled=true</item>
+
+        <!-- Don't pin camera app to save memory -->
+        <item>runtime_native_boot/pin_camera=false</item>
+
+        <!-- Globally enable the new photo picker -->
+	<item>storage_native_boot/take_over_get_content=true</item>
+
+        <!-- Machine learning back gesture (requires TensorFlow model) -->
+        <item>systemui/use_back_gesture_ml_model=true</item>
+        <item>systemui/back_gesture_ml_model_name=backgesture</item>
+        <item>systemui/back_gesture_ml_model_threshold=0.8</item>
 
         <!--
             Keep track of more app ops for privacy dashboard display.
@@ -77,7 +79,8 @@
             Calendar: READ_CALENDAR, WRITE_CALENDAR
             Call logs: READ_CALL_LOG, WRITE_CALL_LOG
             Contacts: READ_CONTACTS, WRITE_CONTACTS, GET_ACCOUNTS
-            Files and media: READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, ACCESS_MEDIA_LOCATION
+		Files and media: READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STOR
+		AGE, ACCESS_MEDIA_LOCATION
             Nearby devices: BLUETOOTH_SCAN, BLUETOOTH_CONNECT, BLUETOOTH_ADVERTISE, UWB_RANGING
             Phone: READ_PHONE_STATE, READ_PHONE_NUMBERS, CALL_PHONE, READ_CALL_LOG, WRITE_CALL_LOG, ADD_VOICEMAIL, USE_SIP, PROCESS_OUTGOING_CALLS, ANSWER_PHONE_CALLS, ACCEPT_HANDOVER
             Body sensors: ACTIVITY_RECOGNITION
@@ -88,6 +91,30 @@
             Microphone: PHONE_CALL_MICROPHONE
         -->
         <item>privacy/discrete_history_ops_cslist=0,109,1,108,26,101,27,102,106,100,8,9,6,7,4,5,62,59,60,90,77,111,114,112,51,65,13,6,7,52,53,54,69,74,79,113,20,16,14,19,18,57</item>
+
+        <!-- System Ui -->
+        <item>systemui/clipboard_overlay_show_actions=true</item>
+        <item>systemui/enable_screenshot_corner_flow=true</item>
+        <item>systemui/enable_screenshot_notification_smart_actions=true</item>
+        <item>systemui/enable_screenshot_scrolling=true</item>
+        <item>systemui/quick_access_wallet_enabled=true</item>
+        <item>systemui/tap_to_edit=true</item>
+	<item>systemui/volume_separate_notification=true</item>
+
+        <!-- Privacy -->
+        <item>privacy/discrete_history_cutoff_millis=604800000</item>
+        <item>privacy/permissions_hub_enabled=true</item>
+        <item>privacy/permissions_hub_2_enabled=true</item>
+        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
+        <item>privacy/warning_banner_enabled=true</item>
+        <item>privacy/safety_center_is_enabled=true</item>
+        <item>privacy/safety_protection_enabled=true</item>
+
+        <!-- Settings -->
+        <item>settings_ui/bt_advanced_header_enabled=true</item>
+        <item>settings_ui/bt_le_audio_contact_sharing_enabled=true</item>
+        <item>settings_ui/bt_near_by_suggestion_enabled=true</item>
+	<item>settings_ui/bt_slice_settings_enabled=true</item>
 
         <!-- Disable always screen on -->
         <item>attention_manager_service/keep_screen_on_enabled=false</item>
