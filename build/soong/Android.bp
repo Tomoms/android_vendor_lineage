@@ -292,6 +292,7 @@ soong_config_module_type {
         "target_health_charging_control_supports_toggle",
         "target_health_charging_control_supports_bypass",
         "target_health_charging_control_supports_deadline",
+        "target_health_charging_control_supports_limit",
     ],
     value_variables: [
         "target_health_charging_control_charging_path",
@@ -313,6 +314,9 @@ health_charging_control {
         },
         target_health_charging_control_supports_deadline: {
             cppflags: ["-DHEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE"],
+        },
+        target_health_charging_control_supports_limit: {
+            cppflags: ["-DHEALTH_CHARGING_CONTROL_SUPPORTS_LIMIT"],
         },
         target_health_charging_control_charging_path: {
             cppflags: ["-DHEALTH_CHARGING_CONTROL_CHARGING_PATH=\"%s\""],
@@ -370,86 +374,6 @@ nvidia_enhancements {
     soong_config_variables: {
         uses_nvidia_enhancements: {
             cppflags: ["-DNV_ANDROID_FRAMEWORK_ENHANCEMENTS"],
-        },
-    },
-}
-
-// QCOM specific config modules
-soong_config_module_type {
-    name: "librmnetctl_pre_uplink",
-    module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
-    bool_variables: ["uses_pre_uplink_features_netmgrd"],
-    properties: ["cflags"],
-}
-
-librmnetctl_pre_uplink {
-    name: "librmnetctl_pre_uplink_defaults",
-    soong_config_variables: {
-        uses_pre_uplink_features_netmgrd: {
-            cflags: ["-DNO_UPLINK_FEATURES"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "extended_compress_format",
-    module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
-    bool_variables: ["supports_extended_compress_format"],
-    properties: ["cflags"],
-}
-
-extended_compress_format {
-    name: "extended_compress_format_defaults",
-    soong_config_variables: {
-        supports_extended_compress_format: {
-            cflags: ["-DENABLE_EXTENDED_COMPRESS_FORMAT"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "surfaceflinger_qcom_extensions",
-    module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
-    value_variables: ["qcom_display_headers_namespace"],
-    properties: [
-        "cppflags",
-        "header_libs",
-    ],
-}
-
-surfaceflinger_qcom_extensions {
-    name: "surfaceflinger_qcom_ext_defaults",
-    soong_config_variables: {
-        qcom_display_headers_namespace: {
-            cppflags: ["-DQCOM_UM_FAMILY"],
-            header_libs: ["//%s:display_intf_headers"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "qti_vibrator_hal",
-    module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
-    bool_variables: ["qti_vibrator_use_effect_stream"],
-    value_variables: ["qti_vibrator_effect_lib"],
-    properties: [
-        "cppflags",
-        "shared_libs",
-    ],
-}
-
-qti_vibrator_hal {
-    name: "qti_vibrator_hal_defaults",
-    soong_config_variables: {
-        qti_vibrator_use_effect_stream: {
-            cppflags: ["-DUSE_EFFECT_STREAM"],
-        },
-        qti_vibrator_effect_lib: {
-            shared_libs: ["%s"],
         },
     },
 }
