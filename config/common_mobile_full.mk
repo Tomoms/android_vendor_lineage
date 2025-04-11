@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
     fonts_customization.xml \
     FontGoogleSansFlexOverlay \
     FontLatoOverlay \
-    FontRubikOverlay
+    FontRubikOverlay \
+    FontInterOverlay
 
 # Include Lineage LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/dictionaries
