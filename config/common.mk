@@ -63,6 +63,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
+# Inter font
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/lineage/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts)
+
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/lineage-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lineage-sysconfig.xml
