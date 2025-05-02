@@ -296,6 +296,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/lineage/etc/adblock/init.adblock.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.adblock.rc
 
+# EGL - Blobcache configuration
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.egl.blobcache.multifile=true \
+    ro.egl.blobcache.multifile_limit=33554432
+
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
