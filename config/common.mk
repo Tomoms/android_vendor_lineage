@@ -139,9 +139,7 @@ PRODUCT_PACKAGES += \
 ifeq ($(PRODUCT_IS_ATV),)
 PRODUCT_PACKAGES += \
     ExactCalculator \
-    TrichromeLibrary \
-    TrichromeWebView \
-    TrichromeChrome
+    Jelly
 endif
 
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
