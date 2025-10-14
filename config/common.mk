@@ -165,6 +165,9 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 # Reduce system server verbosity
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 
+# Do not include other java mini debug info
+PRODUCT_OTHER_JAVA_DEBUG_INFO := false
+
 # Bootanimation
 TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
