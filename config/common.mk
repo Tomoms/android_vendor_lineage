@@ -157,7 +157,7 @@ ifeq ($(PRODUCT_IS_ATV),)
 PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly \
-    CromiteWebView
+    AOSmiumWebView
 endif
 
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
