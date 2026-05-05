@@ -175,4 +175,10 @@
     
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+
+    <!-- Whether to enable glanceable hub features on this device. -->
+    <bool name="config_glanceableHubEnabled">true</bool>
+
+    <!-- Whether glanceable hub is enabled by default. -->
+    <bool name="config_glanceableHubEnabledByDefault">true</bool>
 </resources>
